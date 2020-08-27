@@ -5,5 +5,5 @@ package services;
 import "models/message.proto";
 
 service ChatService {
-    rpc chat(stream Message) returns (stream Message) {} 
+    rpc chat(stream models.Message) returns (stream models.Message) {} 
 }
