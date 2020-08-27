@@ -29,3 +29,10 @@ But if you're forking this repo, then you'll also have to replace the @scope in 
    2) The `url` of the `repository` should be updated to reflect your fork.
 2) `proto/npm/.npmrc`
    1) This file should have the following content: `registry=https://npm.pkg.github.com/USER` (replace USER with your GitHub username)
+
+##### Gradle publish
+1) You'll need to export the following variables in the terminal: (replace jocampo and the token with your own values)
+   1) `export GITHUB_ACTOR=jocampo`
+   2) `export GITHUB_TOKEN=token`
+2) Head into `proto/gradle` and run `./gradlew build`
+3) Then, run `./gradlew publish`
