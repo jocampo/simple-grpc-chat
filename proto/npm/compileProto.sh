@@ -16,7 +16,7 @@ cp -R "${PROTO_PATH}/" "${PROTO_DIR}"
 TOP_LEVEL_PROTOS=( $(find ${PROTO_DIR} -name "*.proto") )
 
 # JavaScript
-pbjs --es6 -t static-module --path "${PROTO_DIR}" --out "${PWD}/proto-objects.js" ${TOP_LEVEL_PROTOS[@]}
+pbjs --es5 -t static-module --path "${PROTO_DIR}" --out "${PWD}/proto-objects.js" ${TOP_LEVEL_PROTOS[@]}
 
 # TypeScript
 pbts --out "${PWD}/proto-objects.d.ts" "${PWD}/proto-objects.js"
